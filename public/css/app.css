@@ -6,3 +6,27 @@
     height: 100vh;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.dashboardWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 100vw;
+    background-color: bisque;
+}
