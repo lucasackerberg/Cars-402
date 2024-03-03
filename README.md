@@ -1,3 +1,42 @@
+## Idea:
+
+# A pimp-my-ride-shop database.
+
+1. Cars comming in, getting the status "waiting"
+2. Mechanics get assigend - car gets status "ongoing"
+3. Mechaninc fixes the car, car gets status "completed"
+
+## 3 Tables
+
+## Car
+- Car info...
+- Status
+
+## Mechanics
+- Info...
+
+## assigned_mechanics (rel table)
+- Mechanic id
+- Car id
+
+## CRUD:
+Create cars
+Update cars (status)
+Delete cars?
+Assign mechanics
+
+## Views:
+- List over all cars
+- Display waiting cars, ongoing cars and completed cars
+- Individual view for each car with its status and assigned mechanic
+- List for each mechanic and their cars (completed, waiting and ongoing)
+- View to assign a mechanic (maybe directly from the list with cars)
+
+### Extra things?
+- Only one car assigned to a mechanic at a time? 
+
+--------------
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
