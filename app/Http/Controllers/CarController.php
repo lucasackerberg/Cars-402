@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -18,9 +19,35 @@ class CarController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $request->validate([
+            'brand' => 'required|string',
+            'model' => 'required|string',
+            'year' => 'required|string',
+            'color' => 'required|string',
+            'registration' => 'required|string',
+            'problem_description' => 'required|string',
+        ]);
+
+        // Get the authenticated user
+        $user = Auth::user();
+
+        // Create a new car record in the database
+        $car = new Car([
+            'status' => 'Pending',
+            'brand' => $request->input('brand'),
+            'model' => $request->input('model'),
+            'year' => $request->input('year'),
+            'color' => $request->input('color'),
+            'registration' => $request->input('registration'),
+            'problem_description' => $request->input('problem_description'),
+        ]);
+
+        // Associate the car with the authenticated user
+        $user->cars()->save($car);
+
+        return redirect()->route('dashboard')->with('success', 'Car created successfully');
     }
 
     /**
