@@ -10,6 +10,6 @@ class DashboardController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
-        return view('dashboard', compact('user'));
+        return view('/dashboard', compact('user'));
     }
 }
