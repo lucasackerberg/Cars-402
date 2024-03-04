@@ -13,7 +13,18 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             
+=======
+            $table->unsignedBigInteger('user_id');
+            $table->text('status');
+            $table->text('brand');
+            $table->text('model');
+            $table->text('year');
+            $table->text('color');
+            $table->text('registration');
+            $table->text('problem_description');
+>>>>>>> refs/remotes/origin/develop
             $table->timestamps();
         });
     }
