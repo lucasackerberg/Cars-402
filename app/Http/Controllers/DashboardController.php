@@ -11,14 +11,10 @@ class DashboardController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
-<<<<<<< HEAD
-        return view('/dashboard', compact('user'));
-=======
         $cars = Car::where('status', 'Pending')->get();
         return view('dashboard', [
             'user' => $user,
             'cars' => $cars,
         ]);
->>>>>>> refs/remotes/origin/develop
     }
 }
