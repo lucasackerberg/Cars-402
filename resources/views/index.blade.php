@@ -8,20 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    @include('errors');
+    @include('errors')
     <div class="loginContainer">
-        <h1>402Cars - Your virtual car inventory!</h1>
-        <form method="post" action="/login" name="loginForm">
+        <div class="loginText">
+            <h1 class="orbitron">402 <br> Street <br> Swagger <br> Customs</h1>
+        </div>
+        <form method="post" action="/login" name="loginForm" class="loginForm">
             @csrf
             <div>
-                <label for="username">Email</label>
-                <input name="email" id="email" type="email" />
+                <label class="loginLabelText" for="username"></label>
+                <input name="email" id="email" type="email" placeholder="Email" class="loginInput"/>
             </div>
             <div>
-                <label for="password">Password</label>
-                <input name="password" id="password" type="password" />
+                <label class="loginLabelText" for="password"></label>
+                <input name="password" id="password" type="password" placeholder="Password" class="loginInput"/>
             </div>
-            <button type="submit">Login</button>
+            <button class="loginButton" type="submit">Login</button>
         </form>
     </div>
 </body>

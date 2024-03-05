@@ -1,43 +1,20 @@
 @include('header')
 <div class="content">
     <h3>Welcome, {{ $user->name }}!</h3>
-    <h4>The following cars are yours:</h4>
+    <h4>These are the current repairs inside the shop</h4>
     <div class="dashboardWrapper">
+        <button class="loginButton addNewCarButton"><a href="/completedCars">See completed cars here!</a></button>
         @foreach($cars as $car)
         <div>
             <h3>{{ $car->status }} {{ $car->brand }} {{ $car->model }} Year: {{ $car->year }} </h3>
+            <form action="{{ route('completeCar', ['car' => $car->id]) }}" method="POST" class="updateStatusForm">
+                @csrf
+                @method('PUT')
+                <button type="submit">Move to Completed</button>
+            </form>
         </div>
         @endforeach
-    </div>
-    <form action="/createCar" method="POST" class="createCarForm">
-        @csrf
-        <h2>Create car</h2>
-        <div>
-            <label for="brand">Brand</label>
-            <input name="brand" type="text">
-        </div>
-        <div>
-            <label for="model">Model</label>
-            <input name="model" type="text">
-        </div>
-        <div>
-            <label for="year">Year</label>
-            <input name="year" type="text">
-        </div>
-        <div>
-            <label for="color">Color</label>
-            <input name="color" type="text">
-        </div>
-        <div>
-            <label for="registration">Registration</label>
-            <input name="registration" type="text">
-        </div>
-        <div>
-            <label for="problem_description">Problem Description</label>
-            <textarea name="problem_description"></textarea>
-        </div>
-        <button type="submit">Create Car</button>
-    </form>
-    
+        <button class="loginButton addNewCarButton"><a href="/addnewcar">Add new car</a></button>
+    </div> 
 </div>
 @include('footer')
