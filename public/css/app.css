@@ -1,9 +1,71 @@
+body{
+    margin:0px;
+}
+
+.orbitron{
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .loginContainer{
+    background-image: url(../pictures/vlad.jpg);
+    background-size:cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     height: 100vh;
+}
+
+.loginText{
+    display: flex;
+    justify-content: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color:#ffffff40;
+}
+
+.loginForm{
+    width: 70%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.loginLabelText{
+    font-size: 25px;
+}
+
+.loginButton{
+    width: 30%;
+    height: 30%;
+    padding: 10px;
+    border: 2px solid #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: #DBD3D3;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.addNewCarButton{
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.loginInput{
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #C4C4C4;
 }
 
 .content{
@@ -29,4 +91,21 @@ footer{
     height: 60vh;
     width: 100vw;
     background-color: bisque;
+}
+
+.completedCar{
+    border: 2px solid black;
+}
+
+.completedCarsWrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carsSection{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
 }
