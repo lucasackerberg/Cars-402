@@ -77,9 +77,23 @@ class CarController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Car $car)
+    public function completeCar(Car $car)
     {
-        //
+        $car->update(['status' => 'Complete']);
+
+        return redirect()->back()->with('success', 'Car status updated successfully');
+    }
+
+    public function completedCars()
+    {
+        $completedCars = Car::where('status', 'Complete')->get();
+
+        return view('completedCars', ['completedCars' => $completedCars]);
+    }
+
+    public function CreateCar()
+    {
+        return view('addNewCar');
     }
 
     /**
