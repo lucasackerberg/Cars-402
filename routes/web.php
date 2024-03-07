@@ -32,3 +32,4 @@ Route::post('/createCar', [CarController::class, 'create']);
 Route::put('/completeCar/{car}', [CarController::class, 'completeCar'])->name('completeCar');
 Route::get('completedCars', [CarController::class, 'completedCars'])->name('completedCars');
 Route::get('addnewcar', [CarController::class, 'CreateCar'])->name('CreateCar');
+Route::put('/assignMechanic/{car}', [CarController::class, 'assignMechanic'])->name('assignMechanic');
