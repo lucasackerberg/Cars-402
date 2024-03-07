@@ -1,4 +1,5 @@
 @include('header')
+@include('navbar')
 <div class="addNewCarWrapper">
     <div class="addNewCarForm">
         <form action="{{ route('updateCar', ['car' => $car->id]) }}" method="POST" class="updateCarForm">

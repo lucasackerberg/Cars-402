@@ -1,12 +1,12 @@
 @include('header')
 <div class="content">
     <h3>Welcome, {{ $user->name }}!</h3>
-    <h4>These are the current repairs inside the shop</h4>
+    
+    @include('navbar')
     <div class="dashboardWrapper">
        
-      
         <div>
-           
+           <h4>These are the current repairs inside the shop</h4> 
             <!-- Creating a table to display all the data from our databse -->
             <div>
                 <table>
@@ -48,8 +48,8 @@
             </div>
         </div>
    
-        <button class="loginButton addNewCarButton"><a href="/completedCars">Completed repairs</a></button>
-        <button class="loginButton addNewCarButton"><a href="/addnewcar">Add new car</a></button>
+        
+        <!-- <button class="loginButton addNewCarButton"><a href="/addnewcar">Add new car</a></button> -->
     </div> 
 </div>
 @include('footer')

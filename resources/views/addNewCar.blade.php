@@ -1,4 +1,5 @@
 @include('header')
+@include('navbar')
 <div class="addNewCarWrapper">
     <div class="addNewCarForm">
         <form action="/createCar" method="POST" class="createCarForm">
