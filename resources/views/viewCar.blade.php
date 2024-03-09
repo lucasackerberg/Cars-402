@@ -31,6 +31,11 @@
             </div>
             <button type="submit" class="btn btn-primary">Update Car</button>
         </form>
+        <form action="{{ route('destroy', ['car' => $car->id]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit">Delete Car</button>
+        </form>
     </div>
 </div>
 @include('footer')
