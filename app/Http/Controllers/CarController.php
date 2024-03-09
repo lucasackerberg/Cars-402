@@ -84,12 +84,12 @@ class CarController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    //view all cars
+    public function allCars()
     {
-        //
+        $cars = Car::all();
+
+        return view('allCars', ['cars' => $cars]);
     }
 
     /**

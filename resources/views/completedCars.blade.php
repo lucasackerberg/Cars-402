@@ -1,4 +1,5 @@
 @include('header')
+@include('navbar')
 <h1>Completed Cars</h1>
 
 <div class="completedCarsWrapper">
