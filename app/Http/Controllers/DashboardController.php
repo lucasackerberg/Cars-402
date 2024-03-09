@@ -12,7 +12,6 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $cars = Car::where('status', 'Pending')->where('user_id', 0)->get();
-        print($user);
         $assignedCars = $user->cars()->where('status', 'Ongoing')->get();
         return view('dashboard', [
             'user' => $user,

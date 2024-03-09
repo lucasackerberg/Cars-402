@@ -11,7 +11,7 @@
             <h2>Avaliable Cars/Jobs</h2>
 
             <div>
-                <table>
+                <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -20,7 +20,6 @@
                             <th>Model</th>
                             <th>Year</th>
                             <th>Description</th>
-                            <th>Edit</th>
                             <th>Status</th>
                             <th>Assignment</th>  
                         </tr>
@@ -34,7 +33,6 @@
                                 <td>{{ $car->model }}</td>
                                 <td>{{ $car->year }}</td>
                                 <td>{{ $car->problem_description }}</td>
-                                <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Update car details</a></td>
                                 <td>{{ $car->status }}</td>
                                 <td> 
                                     <form action="{{ route('assignMechanic', ['car' => $car->id]) }}" method="POST" class="assignMechanicForm">
@@ -64,10 +62,10 @@
         </div>
  
         <div>
-           <h2>Ongoing Jobs</h2> 
+           <h2>Ongoing Repairs</h2> 
             <!-- Creating a table to display all the data from our databse -->
             <div>
-                <table>
+                <table class="table table-hover" >
                     <thead>
                         <tr>
                             <th>ID</th>
