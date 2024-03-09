@@ -30,11 +30,9 @@ class CarController extends Controller
             'problem_description' => 'required|string',
         ]);
 
-        // Get the authenticated user
-        $user = Auth::user();
-
         // Create a new car record in the database
         $car = new Car([
+            'user_id' => 0,
             'status' => 'Pending',
             'brand' => $request->input('brand'),
             'model' => $request->input('model'),
@@ -43,10 +41,7 @@ class CarController extends Controller
             'registration' => $request->input('registration'),
             'problem_description' => $request->input('problem_description'),
         ]);
-
-        // Associate the car with the authenticated user
-        $user->cars()->save($car);
-
+        $car->save();
         return redirect()->route('dashboard')->with('success', 'Car created successfully');
     }
 
@@ -117,6 +112,14 @@ class CarController extends Controller
     public function CreateCar()
     {
         return view('addNewCar');
+    }
+
+    public function assignMechanic(Car $car)
+    {
+        $car->update(['user_id' => auth()->id()]);
+        $car->update(['status' => 'Ongoing']);
+
+        return redirect()->back()->with('success', 'Car assigned successfully');
     }
 
     /**
