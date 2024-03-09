@@ -90,7 +90,7 @@ footer{
     flex-direction: column;
     height: 60vh;
     width: 100vw;
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 
 /* .completedCar{

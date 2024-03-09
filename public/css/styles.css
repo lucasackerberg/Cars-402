@@ -1,0 +1,19 @@
+.btn {
+    background-color: rgb(194, 52, 52);
+    border-bottom-color:  rgb(194, 52, 52);
+    border-top-color:  rgb(194, 52, 52);
+    border-left-color:  rgb(194, 52, 52);
+    border-right-color:  rgb(194, 52, 52);
+}
+
+.btn-primary {
+    background-color: rgb(194, 52, 52);
+}
+
+.btn-primary:hover {
+    background-color:rgb(89, 89, 89);
+    border-right-color:  rgb(89, 89, 89);
+    border-left-color:  rgb(89, 89, 89);
+    border-top-color:  rgb(89, 89, 89);
+    border-bottom-color:  rgb(89, 89, 89);
+}
