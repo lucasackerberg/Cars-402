@@ -46,25 +46,48 @@ class CarController extends Controller
     }
 
     /**
+     * Show the form for editing the specified resource.
+     */
+    public function update(Request $request, Car $car)
+    {
+        $request->validate([
+            'brand' => 'required|string',
+            'model' => 'required|string',
+            'year' => 'required|string',
+            'color' => 'required|string',
+            'registration' => 'required|string',
+            'problem_description' => 'required|string',
+        ]);
+
+        $car->update([
+            'brand' => $request->input('brand'),
+            'model' => $request->input('model'),
+            'year' => $request->input('year'),
+            'color' => $request->input('color'),
+            'registration' => $request->input('registration'),
+            'problem_description' => $request->input('problem_description'),
+        ]);
+
+        return redirect()->back()->with('success', 'Car status updated successfully');
+    }
+
+    /**
+     * View a single
+     */
+    public function viewCar(int $carId)
+    {
+        $user = Auth::user();
+        $car = Car::where('id', $carId)->first();
+ 
+        return view('viewCar', [
+            'car' => $car,
+        ]);
+    }
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Car $car)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Car $car)
     {
         //
     }

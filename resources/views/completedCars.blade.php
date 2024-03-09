@@ -3,11 +3,38 @@
 
 <div class="completedCarsWrapper">
     <div class="carsSection">
-        @foreach($completedCars as $car)
+      
             <div class="completedCar">
-                <h4>{{ $car->brand }} {{ $car->model }} <br> Year: {{ $car->year }} <br> Status: {{ $car->status }} <br> Problem Description: {{ $car->problem_description }} <br> Color: {{ $car->color }} <br> Registration Plate: {{ $car->registration }} <br> </h4>
-            </div>
-        @endforeach
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>User ID</th>
+                            <th>Brand</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($completedCars as $car)
+                            <tr>
+                                <td>{{ $car->id }}</td>
+                                <td>{{ $car->user_id }}</td>
+                                <td>{{ $car->brand }}</td>
+                                <td>{{ $car->model }}</td>
+                                <td>{{ $car->year }}</td>
+                                <td>{{ $car->problem_description }}</td>
+                                <td>{{ $car->status }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            
+       
     </div>
 </div>
 @include('footer')
