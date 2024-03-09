@@ -38,11 +38,6 @@ Route::put('/assignMechanic/{car}', [CarController::class, 'assignMechanic'])->n
 
 Route::get('/viewCar/{car}', [CarController::class, 'viewCar'])->name('viewCar');
 
-<<<<<<< HEAD
 Route::post('/updateCar/{car}', [CarController::class, 'update'])->name('updateCar');
 
 Route::get('/allCars', [CarController::class, 'allCars'])->name('allCars');
-=======
-Route::post('/updateCar/{car}', [CarController::class, 'update'])->name('updateCar');;
-
->>>>>>> develop

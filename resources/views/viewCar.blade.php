@@ -29,7 +29,7 @@
                 <label for="problem_description">Problem Description</label>
                 <textarea name="problem_description">{{ $car->problem_description }}</textarea>
             </div>
-            <button type="submit">Update Car</button>
+            <button type="submit" class="btn btn-primary">Update Car</button>
         </form>
     </div>
 </div>
