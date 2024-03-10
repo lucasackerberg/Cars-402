@@ -1,4 +1,4 @@
-<div class="navBar ">
+<div class="navBar">
         <a href="/dashboard">Home</a> 
         <a href="/addnewcar">Add new car</a>
         <a href="/allCars">All cars</a>
