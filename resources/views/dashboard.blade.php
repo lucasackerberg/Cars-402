@@ -38,7 +38,7 @@
                                     <form action="{{ route('assignMechanic', ['car' => $car->id]) }}" method="POST" class="assignMechanicForm">
                                         @csrf
                                         @method('PUT') 
-                                        <button type="submit">Take this job</button>
+                                        <button type="submit" class="btn btn-light" >Take this job</button>
                                     </form>
                                 </td>
                             </tr>
@@ -94,7 +94,7 @@
                                     <form action="{{ route('completeCar', ['car' => $car->id]) }}" method="POST" class="updateStatusForm">
                                         @csrf
                                         @method('PUT')
-                                        <button type="submit" class="material-symbols-outlined">done_all</button>
+                                        <button type="submit" class="btn btn-light material-symbols-outlined">done_all</button>
                                     </form>
                                 </td>
                             </tr>
