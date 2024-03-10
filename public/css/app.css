@@ -3,7 +3,7 @@ body{
 }
 
 .orbitron{
-  font-family: "Orbitron", sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -11,12 +11,13 @@ body{
 
 .loginContainer{
     background-image: url(../pictures/vlad.jpg);
-    background-size:cover;
+    background-size: cover;   
     display: flex;
     flex-direction: column;
     justify-content:space-around;
     align-items: center;
     height: 100vh;
+   
 }
 
 .loginText{
@@ -41,7 +42,7 @@ body{
     font-size: 25px;
 }
 
-.loginButton{
+/* .loginButton{
     width: 30%;
     height: 30%;
     padding: 10px;
@@ -51,18 +52,18 @@ body{
     background-color: #DBD3D3;
     font-size: 20px;
     font-weight: bolder;
-}
+} */
 
-.addNewCarButton{
+/* .addNewCarButton{
     width: 200px;
     height: 50px;
     font-size: 15px;
-}
+} */
 
 .loginInput{
     font-size: 18px;
     padding: 10px;
-    border: 2px solid #3498db;
+    border: 1px solid black;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #C4C4C4;
@@ -79,11 +80,6 @@ body{
     display: flex;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
 
 .dashboardWrapper{
     display: flex;

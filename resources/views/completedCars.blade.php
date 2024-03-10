@@ -1,6 +1,6 @@
 @include('header')
 @include('navbar')
-<h1>Completed Cars</h1>
+<h2>Completed Cars</h2>
 
 <div class="completedCarsWrapper">
     <div class="carsSection">
