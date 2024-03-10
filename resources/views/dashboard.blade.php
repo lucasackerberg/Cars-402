@@ -88,7 +88,7 @@
                                 <td>{{ $car->model }}</td>
                                 <td>{{ $car->year }}</td>
                                 <td>{{ $car->problem_description }}</td>
-                                <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Update car details</a></td>
+                                <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Car details</a></td>
                                 <td>{{ $car->status }}</td>
                                 <td> 
                                     <form action="{{ route('completeCar', ['car' => $car->id]) }}" method="POST" class="updateStatusForm">

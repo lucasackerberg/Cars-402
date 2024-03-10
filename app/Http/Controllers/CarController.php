@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
+    
+    
     /**
      * Display a listing of the resource.
      */
@@ -131,5 +133,8 @@ class CarController extends Controller
 
     return redirect()->route('dashboard')->with('success', 'Car deleted successfully');
     }
+
+    
+
 
 }

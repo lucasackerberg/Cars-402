@@ -14,7 +14,7 @@
                     <th>Year</th>
                     <th>Description</th>
                     <th>Status</th>
-                    <th>Update</th>
+                    <th>Edit / Remove</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +27,7 @@
                         <td>{{ $car->year }}</td>
                         <td>{{ $car->problem_description }}</td>
                         <td>{{ $car->status }}</td>
-                        <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Edit</a></td>
+                        <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Car details</a></td>
                     </tr>
                 @endforeach
             </tbody>

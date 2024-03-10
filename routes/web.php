@@ -43,3 +43,5 @@ Route::post('/updateCar/{car}', [CarController::class, 'update'])->name('updateC
 Route::get('/allCars', [CarController::class, 'allCars'])->name('allCars');
 
 Route::delete('/viewCar/{car}', [CarController::class, 'destroy'])->name('destroy');
+
+
