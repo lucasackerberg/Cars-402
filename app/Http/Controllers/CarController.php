@@ -89,6 +89,7 @@ class CarController extends Controller
     //view all cars
     public function allCars(Request $request, $col = 'created_at', $sort = 'asc')
     {
+        $user = Auth::user();
         $cars = Car::orderBy($col, $sort)->get();
 
         if($sort === 'asc'){
@@ -97,28 +98,32 @@ class CarController extends Controller
             $changeSort = 'asc';
         }
 
-        return view('allCars', ['cars' => $cars, 'changeSort' => $changeSort]);
+        return view('allCars', ['cars' => $cars, 'changeSort' => $changeSort, 'user' => $user]);
     }
     /**
      * Update the specified resource in storage.
      */
     public function completeCar(Car $car)
     {
-        $car->update(['status' => 'Complete']);
+        $user = Auth::user();
+
+        $car->update(['status' => 'Complete', 'user' => $user]);
 
         return redirect()->back()->with('success', 'Car status updated successfully');
     }
 
     public function completedCars()
     {
+        $user = Auth::user();
         $completedCars = Car::where('status', 'Complete')->get();
 
-        return view('completedCars', ['completedCars' => $completedCars]);
+        return view('completedCars', ['completedCars' => $completedCars, 'user' => $user]);
     }
 
     public function CreateCar()
-    {
-        return view('addNewCar');
+    {   
+        $user = Auth::user();
+        return view('addNewCar', ['user' => $user]);
     }
 
     public function assignMechanic(Car $car)

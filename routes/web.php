@@ -44,4 +44,3 @@ Route::get('/allCars/{col?}/{sort?}', [CarController::class, 'allCars'])->name('
 
 Route::delete('/viewCar/{car}', [CarController::class, 'destroy'])->name('destroy');
 
-

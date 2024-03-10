@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .btn {
     background-color: var(--red);
     border-bottom-color: var(--red);

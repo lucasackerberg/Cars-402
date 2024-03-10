@@ -1,6 +1,6 @@
 @include('header')
 <div class="content">
-    <h3>Welcome, {{ $user->name }}!</h3>
+    <!-- <h3>Welcome, {{ $user->name }}!</h3> -->
     
     @include('navbar')
     <div class="dashboardWrapper">
