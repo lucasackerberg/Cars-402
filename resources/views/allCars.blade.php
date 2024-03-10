@@ -7,14 +7,14 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th><a href="{{ route('allCars', ['sort' => $changeSort, 'col' => 'id']) }}" class="sortButton-{{ $changeSort }}">ID</a></th>
                     <th>User ID</th>
                     <th>Brand</th>
                     <th>Model</th>
                     <th>Year</th>
                     <th>Description</th>
-                    <th>Status</th>
-                    <th>Update</th>
+                    <th><a href="{{ route('allCars', ['sort' => $changeSort, 'col' => 'status']) }}" class="sortButton-{{ $changeSort }}">Status</a></th>
+                    <th>Edit / Remove</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,7 +27,7 @@
                         <td>{{ $car->year }}</td>
                         <td>{{ $car->problem_description }}</td>
                         <td>{{ $car->status }}</td>
-                        <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Edit</a></td>
+                        <td><a href="{{ route('viewCar', ['car' => $car->id]) }}">Car details</a></td>
                     </tr>
                 @endforeach
             </tbody>
