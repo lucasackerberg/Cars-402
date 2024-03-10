@@ -87,13 +87,18 @@ class CarController extends Controller
     }
 
     //view all cars
-    public function allCars()
+    public function allCars(Request $request, $col = 'created_at', $sort = 'asc')
     {
-        $cars = Car::all();
+        $cars = Car::orderBy($col, $sort)->get();
 
-        return view('allCars', ['cars' => $cars]);
+        if($sort === 'asc'){
+            $changeSort = 'desc';
+        } else {
+            $changeSort = 'asc';
+        }
+
+        return view('allCars', ['cars' => $cars, 'changeSort' => $changeSort]);
     }
-
     /**
      * Update the specified resource in storage.
      */
