@@ -20,28 +20,28 @@ use App\Http\Controllers\LogoutController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::post('login', LoginController::class);
 Route::get('logout', LogoutController::class);
 
 Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::post('/createCar', [CarController::class, 'create']);
+    Route::put('/completeCar/{car}', [CarController::class, 'completeCar'])->name('completeCar');
+    Route::get('completedCars', [CarController::class, 'completedCars'])->name('completedCars');
+    Route::get('addnewcar', [CarController::class, 'CreateCar'])->name('CreateCar');
+    Route::put('/assignMechanic/{car}', [CarController::class, 'assignMechanic'])->name('assignMechanic');
+
+    Route::get('/viewCar/{car}', [CarController::class, 'viewCar'])->name('viewCar');
+    
+    Route::post('/updateCar/{car}', [CarController::class, 'update'])->name('updateCar');
+    
+    Route::get('/allCars/{col?}/{sort?}', [CarController::class, 'allCars'])->name('allCars');
+    
+    Route::delete('/viewCar/{car}', [CarController::class, 'destroy'])->name('destroy');
 });
 
-Route::post('/createCar', [CarController::class, 'create']);
 
-Route::put('/completeCar/{car}', [CarController::class, 'completeCar'])->name('completeCar');
-Route::get('completedCars', [CarController::class, 'completedCars'])->name('completedCars');
-Route::get('addnewcar', [CarController::class, 'CreateCar'])->name('CreateCar');
-Route::put('/assignMechanic/{car}', [CarController::class, 'assignMechanic'])->name('assignMechanic');
-
-Route::get('/viewCar/{car}', [CarController::class, 'viewCar'])->name('viewCar');
-
-Route::post('/updateCar/{car}', [CarController::class, 'update'])->name('updateCar');
-
-Route::get('/allCars/{col?}/{sort?}', [CarController::class, 'allCars'])->name('allCars');
-
-Route::delete('/viewCar/{car}', [CarController::class, 'destroy'])->name('destroy');
 
 
