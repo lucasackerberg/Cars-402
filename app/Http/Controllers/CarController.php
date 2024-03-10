@@ -8,19 +8,7 @@ use Illuminate\Http\Request;
 
 class CarController extends Controller
 {
-    
-    
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
+    // Show the form for creating a new resource.
     public function create(Request $request)
     {
         $request->validate([
@@ -52,6 +40,8 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
+        $user = Auth::user();
+
         $request->validate([
             'brand' => 'required|string',
             'model' => 'required|string',
@@ -73,9 +63,8 @@ class CarController extends Controller
         return redirect()->back()->with('success', 'Car status updated successfully');
     }
 
-    /**
-     * View a single
-     */
+
+   // View a single car
     public function viewCar(int $carId)
     {
         $user = Auth::user();
@@ -83,10 +72,11 @@ class CarController extends Controller
  
         return view('viewCar', [
             'car' => $car,
+            'user' => $user,
         ]);
     }
 
-    //view all cars
+    // View all cars
     public function allCars(Request $request, $col = 'created_at', $sort = 'asc')
     {
         $user = Auth::user();
@@ -98,11 +88,14 @@ class CarController extends Controller
             $changeSort = 'asc';
         }
 
-        return view('allCars', ['cars' => $cars, 'changeSort' => $changeSort, 'user' => $user]);
+        return view('allCars', [
+            'cars' => $cars, 
+            'changeSort' => $changeSort, 
+            'user' => $user
+        ]);
     }
-    /**
-     * Update the specified resource in storage.
-     */
+
+   // Change status to complete
     public function completeCar(Car $car)
     {
         $user = Auth::user();
@@ -117,15 +110,20 @@ class CarController extends Controller
         $user = Auth::user();
         $completedCars = Car::where('status', 'Complete')->get();
 
-        return view('completedCars', ['completedCars' => $completedCars, 'user' => $user]);
+        return view('completedCars', [
+            'completedCars' => $completedCars, 
+            'user' => $user
+        ]);
     }
 
+    // Adding new car
     public function CreateCar()
     {   
         $user = Auth::user();
         return view('addNewCar', ['user' => $user]);
     }
 
+    //Assigning a mechanic to a specific car
     public function assignMechanic(Car $car)
     {
         $car->update(['user_id' => auth()->id()]);
@@ -134,9 +132,7 @@ class CarController extends Controller
         return redirect()->back()->with('success', 'Car assigned successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+    //Deleting a car
     public function destroy(Car $car)
     {
     $car->delete();

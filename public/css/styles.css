@@ -25,6 +25,10 @@ body {
     border-bottom-color: var(--grey);
 }
 
-h3, h2 {
-    margin: 25px;
+h2 {
+    margin-bottom: 25px;
+    margin-left: 5px;
+}
+.addNewCarWrapper {
+    margin-left: 5px;
 }

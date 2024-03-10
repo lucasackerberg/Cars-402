@@ -15,6 +15,7 @@
                 <a class="{{ Request::is('logout') ? 'active' : '' }} nav-item nav-link" href="/logout">Logout</a>
         </li>
 </nav>
+
 <div class="currentlyLoggedIn">
         <h6>Logged in as: {{ $user->name }}</h6>
 </div>

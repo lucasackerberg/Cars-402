@@ -4,7 +4,7 @@
     <div class="addNewCarForm">
         <form action="/createCar" method="POST" class="createCarForm">
             @csrf
-            <h2>Create car</h2>
+            <h2>Add new car</h2>
             <div >
                 <label for="brand">Brand</label>
                 <input name="brand" type="text">
