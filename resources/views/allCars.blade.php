@@ -1,7 +1,7 @@
 @include('header')
 @include('navbar')
 
-<h2>All the cars</h2>
+<h2>All cars</h2>
 
     <div class="allCars">
         <table class="table table-hover">

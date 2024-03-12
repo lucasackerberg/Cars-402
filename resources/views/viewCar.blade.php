@@ -5,13 +5,16 @@
     <div class="addNewCarForm">
         <form action="{{ route('updateCar', ['car' => $car->id]) }}" method="POST" class="updateCarForm">
             @csrf
-                <h2>Edit car</h2>
+
+            <div class="editCarForm">
+            <h2 class="editCar">Edit car</h2>
                 <form action="{{ route('destroy', ['car' => $car->id]) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-dark btn-sm">Delete</button>
-            </form>
-
+                <button type="submit" class="btn btn-dark btn-sm">Delete this car</button>
+                </form>
+            </div>
+           
             <div class="form-group">
                 <label for="brand">Brand</label>
                 <input name="brand" type="text" value="{{ $car->brand }}" class="form-control">
