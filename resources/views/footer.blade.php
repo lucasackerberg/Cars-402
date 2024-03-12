@@ -66,16 +66,16 @@
             </div>
           </div>
           
-          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+          <!-- <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end"> -->
             <!-- Facebook -->
-            <a
+            <!-- <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
                ><i class="fab fa-facebook-f"></i
               ></a>
 
-            <!-- Twitter -->
+            Twitter 
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
@@ -83,7 +83,7 @@
                ><i class="fab fa-twitter"></i
               ></a>
 
-            <!-- Google -->
+          Google 
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
@@ -91,7 +91,7 @@
                ><i class="fab fa-google"></i
               ></a>
 
-            <!-- Instagram -->
+           Instagram 
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
@@ -99,7 +99,7 @@
                ><i class="fab fa-instagram"></i
               ></a>
           </div>
-        </div>
+        </div> -->
       </section>
     </div>
   </footer>

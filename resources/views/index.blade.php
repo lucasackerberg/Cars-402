@@ -20,7 +20,7 @@
         <form method="post" action="/login" name="loginForm" class="loginForm">
             @csrf
             <div>
-                <label class="loginLabelText" for="username"></label>
+                <label for="email">Email</label>
                 <input name="email" id="email" type="email" placeholder="Email" class="loginInput"/>
             </div>
             <div>
