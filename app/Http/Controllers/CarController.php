@@ -14,7 +14,7 @@ class CarController extends Controller
         $request->validate([
             'brand' => 'required|string',
             'model' => 'required|string',
-            'year' => 'required|string',
+            'year' => 'required|digits:4|integer|min:1900|max:'.(date('Y')+1),
             'color' => 'required|string',
             'registration' => 'required|string',
             'problem_description' => 'required|string',
@@ -45,7 +45,7 @@ class CarController extends Controller
         $request->validate([
             'brand' => 'required|string',
             'model' => 'required|string',
-            'year' => 'required|string',
+            'year' => 'required|digits:4|integer|min:1900|max:'.(date('Y')+1),
             'color' => 'required|string',
             'registration' => 'required|string',
             'problem_description' => 'required|string',
