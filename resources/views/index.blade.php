@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/variables.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Document</title>
+    <title>402 Street Swagger Customs</title>
 </head>
 <body>
     @include('errors')
@@ -21,7 +21,7 @@
             @csrf
             <div>
                 <label class="loginLabelText" for="username"></label>
-                <input name="email" id="email" type="email" placeholder="Email" class="loginInput"/>
+                <input name='email' id="email" type="email" placeholder="Email" class="loginInput"/>
             </div>
             <div>
                 <label class="loginLabelText" for="password"></label>
