@@ -25,7 +25,7 @@ class LoginTest extends TestCase
     public function test_login_user()
     {
         $user = new User();
-        $user->name = 'Mr Robot2';
+        $user->name = 'Mr Robot3';
         $user->email = 'example@robot.se';
         $user->password = Hash::make('123');
         $user->save();
@@ -40,5 +40,5 @@ class LoginTest extends TestCase
         $response->assertSeeText('Avaliable Cars/Jobs');
     }
 
-    
+
 }
