@@ -30,7 +30,7 @@
                 <label for="problem_description">Problem Description</label>
                 <textarea name="problem_description" class="form-control"></textarea>
             </div>
-            <button type="submit" class="btn btn-danger btn-lg">Create Car</button>
+            <button type="submit" class="btn btn-danger btn-lg">Add</button>
         </form>
     </div>
 </div>

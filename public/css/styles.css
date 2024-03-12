@@ -27,13 +27,33 @@ body {
     border-left-color: var(--grey);
     border-top-color: var(--grey);
     border-bottom-color: var(--grey);
-} */ */
+} */ 
 
 h2 {
     margin-bottom: 25px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .addNewCarWrapper {
-    margin-left: 5px;
+    margin-left: 10px;
+}
+
+
+h6 {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: var(--grey);
+    margin-top: auto;
+}
+
+.editCar {
+    display: inline-block;
+}
+
+.btn-sm {
+    display: inline-block;
+    margin-left: 20px;
 }
 
