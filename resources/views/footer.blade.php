@@ -7,9 +7,7 @@
               402 Sreet Customs Swaggers
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+            <span class="material-symbols-outlined">directions_car</span>
             </p> 
           </div>
           <hr class="w-100 clearfix d-md-none" />
@@ -18,16 +16,13 @@
               Your account
             </h6>
             <p>
-              <a class="text-white">Edit details</a>
+              <a class="text-white">Details</a>
             </p>
           </div>
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
               Quick links
             </h6>
-            <p>
-              <a class="text-white">Your Account</a>
-            </p>
             <p>
               <a class="text-white">FAQs</a>
             </p>
