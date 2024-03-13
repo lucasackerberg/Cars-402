@@ -17,6 +17,9 @@
             <div class="form-group">
                 <label for="year">Year</label>
                 <input name="year" type="text" class="form-control">
+                @error('year')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="color">Color</label>

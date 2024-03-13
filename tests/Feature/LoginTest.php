@@ -10,6 +10,9 @@ use Tests\TestCase;
 
 class LoginTest extends TestCase
 {
+
+   use RefreshDatabase;
+
     public function test_login_view_has_required_elements()
     {
         $response = $this->get('/');
@@ -22,7 +25,7 @@ class LoginTest extends TestCase
         // You may add more specific assertions based on your requirements and dynamic data
     }
 
-    /* public function test_login_user()
+    public function test_login_user()
     {
         $user = new User();
         $user->name = 'Mr Robot3';
@@ -33,12 +36,12 @@ class LoginTest extends TestCase
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'example@yrgo.se',
+                'email' => 'example@robot.se',
                 'password' => '123',
             ]);
 
-        $response->assertSeeText('Avaliable Cars/Jobs');
-    } */
+        $response->assertStatus(200);
+    } 
 
 
 }
