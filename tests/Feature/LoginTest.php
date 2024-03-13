@@ -11,8 +11,8 @@ use Tests\TestCase;
 class LoginTest extends TestCase
 {
 
-    use RefreshDatabase;
-    
+   use RefreshDatabase;
+
     public function test_login_view_has_required_elements()
     {
         $response = $this->get('/');
