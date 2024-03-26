@@ -9,7 +9,11 @@
             <!-- Change this to a table maybe, this is the avaliable Cars "list". Where a mechanic can assign himself -->
         <div class="avaliableCarsWrapper">
             <h2>Avaliable Cars/Jobs</h2>
-
+            @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
             <div>
                 <table class="table table-hover">
                     <thead>
